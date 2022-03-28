@@ -15,6 +15,10 @@
 <bean id="myPersson"
       class="com.example.Persson">
     <property name="pet" ref="myPet"/>
+
+    <property name="surname" value="Иванов"/>
+    <property name="age" value="33"/>
+
 </bean>
 
 </beans>

@@ -11,6 +11,8 @@ public class Test3 {
 
         Persson persson = context.getBean("myPersson", Persson.class);
         persson.callYourPet();
+        System.out.println(persson.getAge());
+        System.out.println(persson.getSurname());
         context.close();
     }
 }
