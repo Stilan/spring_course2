@@ -11,6 +11,7 @@
 <bean id="myPet"
           class="com.example.Cat">
     </bean>
+
 <bean id="myPersson"
       class="com.example.Persson">
      <constructor-arg ref="myPet"/>
