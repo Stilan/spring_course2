@@ -8,10 +8,11 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-
-<bean id="myPet"
+    <bean id="myPet"
           class="com.example.Dog"
-      scope="prototype">
+          init-method="init"
+          destroy-method="destroy"
+          scope="prototype">
     </bean>
 
 </beans>
