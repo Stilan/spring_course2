@@ -9,6 +9,8 @@ public class Test6 {
 
         Persson persson = context.getBean("perssonBean", Persson.class);
         persson.callYourPet();
+        System.out.println(persson.getAge());
+        System.out.println(persson.getSurname());
 
 //        Pet cat1 = context.getBean("carBean", Pet.class);
 //        Pet cat2 = context.getBean("carBean", Pet.class);
