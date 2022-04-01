@@ -11,13 +11,26 @@ public  class UniLibrary extends AbstractLibrary {
         return;
     }
 
-//     String returnBook() {
-//        System.out.println("Мы возвращаем книгу UniLibrary");
-//        return "Ok";
-//    }
+     public void returnBook() {
+        System.out.println("Мы возвращаем книгу UniLibrary");
+
+    }
 
     public void getMagazine(){
         System.out.println("Мы берем журнал UniLibrary");
         return;
+    }
+
+    public void returnMagazine(){
+        System.out.println("Мы возвращаем журнал UniLibrary");
+
+    }
+
+    public void addBook() {
+        System.out.println("Мы добовляем книгу в UniLibrary");
+    }
+
+    public void addMagazine() {
+        System.out.println("Мы добовляем журнал в UniLibrary");
     }
 }
