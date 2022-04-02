@@ -33,10 +33,16 @@ public class UniversityLoggingAspect {
 //                "списка студентов после работы метда getStudents");
 //    }
 
-    @AfterThrowing(pointcut = "execution(* getStudents())"
-                    ,throwing = "exception")
-    public void afterThrowingGetStudentsLoggingAdvice(Throwable exception) {
-        System.out.println("afterThrowingGetStudentsLoggingAdvice: логируем выброс исключения " + exception);
+//    @AfterThrowing(pointcut = "execution(* getStudents())"
+//                    ,throwing = "exception")
+//    public void afterThrowingGetStudentsLoggingAdvice(Throwable exception) {
+//        System.out.println("afterThrowingGetStudentsLoggingAdvice: логируем выброс исключения " + exception);
+//    }
+
+    @After("execution(* getStudents())")
+    public void afterGetStudentsLoggingAdvice(){
+        System.out.println("afterGetStudentsLoggingAdvice: логируем нормальное окончание " +
+                "работы метода или выброс исключения");
     }
 
 }
