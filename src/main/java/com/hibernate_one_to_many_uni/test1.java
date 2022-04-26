@@ -1,9 +1,10 @@
-package com.hibernate_one_to_many;
+package com.hibernate_one_to_many_uni;
 
 
 
-import com.hibernate_one_to_many.entity.Department;
-import com.hibernate_one_to_many.entity.Employee;
+
+import com.hibernate_one_to_many_uni.entity.Department;
+import com.hibernate_one_to_many_uni.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -19,9 +20,9 @@ public class test1 {
         Session session = null;
         try {
 //            session = factory.getCurrentSession();
-//            Department dep = new Department("IT", 300, 1200);
-//            Employee employee = new Employee("Zaur", "Tregulov", 800);
-//            Employee employee2 = new Employee("Elena", "Smirnova", 1000);
+//            Department dep = new Department("HR", 500, 1500);
+//            Employee employee = new Employee("Oleg", "Ivanov", 800);
+//            Employee employee2 = new Employee("Andrey", "Sidorov", 1000);
 //            dep.addEmployeesToDepartment(employee);
 //            dep.addEmployeesToDepartment(employee2);
 //            session.beginTransaction();
@@ -31,19 +32,22 @@ public class test1 {
 //            session = factory.getCurrentSession();
 //
 //            session.beginTransaction();
-//            Employee employee = session.get(Employee.class, 1);
+//            Department department = session.get(Department.class, 1);
 //
-//            System.out.println(employee); // помиима обьекта department мы получаем все связаные с ним объект
-//            System.out.println(employee.getDepartment());
-//
+//            System.out.println(department); // помиима обьекта department мы получаем все связаные с ним объект
+//            System.out.println(department.getEmps());
 //            session.getTransaction().commit();
-
-
+//**************************************
+//            session = factory.getCurrentSession();
+//            session.beginTransaction();
+//            Employee employee = session.get(Employee.class, 1);
+//            System.out.println(employee); // помиима обьекта department мы получаем все связаные с ним объект
+//            session.getTransaction().commit();
+//**************************************************
             session = factory.getCurrentSession();
-
             session.beginTransaction();
-            Employee employee = session.get(Employee.class, 1);
-            session.delete(employee);
+            Department department = session.get(Department.class, 2);
+            session.delete(department);
 
             session.getTransaction().commit();
 
